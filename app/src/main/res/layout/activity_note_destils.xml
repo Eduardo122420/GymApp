@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/my_primary"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".NoteDestils">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveNote_layout">
+
+        <TextView
+            android:id="@+id/addnewnoteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nueva Rutina"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"/>
+
+        <ImageButton
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_done_24"
+            android:layout_alignParentEnd="true"
+            app:tint="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saveNote_layout"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:background="@drawable/rounder_corner"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/titleEd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:hint="Día"
+            />
+
+        <EditText
+            android:id="@+id/contentEd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ejercicio"
+            android:minLines="20"
+            android:gravity="top"
+            android:padding="15dp"
+
+            />
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/deleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Rutina"
+        android:textSize="25sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+    
+</RelativeLayout>
